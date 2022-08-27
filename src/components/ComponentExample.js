@@ -1,4 +1,5 @@
 import React from 'react'
+import Item from './Item'
 
 function ComponentExample() {
   return (
@@ -10,6 +11,7 @@ function ComponentExample() {
         <li>減少重複撰寫</li>
       </ul>
       <h3>實際撰寫</h3>
+      <Item/>
       <h3>區別</h3>
       <ul>
         <li>寫法： class component / functional component</li>
