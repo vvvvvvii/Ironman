@@ -1,11 +1,10 @@
-import ComponentExample  from './components/ComponentExample';
+import Memo from "./components/Memo";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <ComponentExample/>
+      <Memo/>
     </div>
   );
 }
 
-export default App;
