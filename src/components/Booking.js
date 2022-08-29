@@ -2,10 +2,17 @@ import { useState } from 'react';
 
 const Booking = () => {
   const [num, setNum] = useState(0)
+  // const [booking, setBooking] = useState({
+  //   num: 0,
+  //   name: '',
+  //   tel: ''
+  // })
   
   const handleNum = (type) =>{
     if(type=== 'minus'){
-      setNum(num-1)
+      // setNum(num-1)
+      setNum((prev)=>prev-1)
+      console.log(num)
     }else{
       setNum(num+1)
     }
