@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-const Booking = () => {
+const Booking = () => {  
   const [num, setNum] = useState(0)
   const handleNum = (type) =>{
     if(type=== 'minus'){
