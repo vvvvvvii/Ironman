@@ -1,20 +1,24 @@
 import React from 'react';
+import { useState } from 'react';
 import Booking from "./Booking";
-import Booking2 from "./Booking2";
 
 function Memo() {
+  const [parentData, setParentData] = useState("父元件創立的資料");
+  const change = (parameter) =>{
+    setParentData(parameter)
+  }
   return (
     <div>
       <h1>Props</h1>
       <h2>「單向傳遞」父元件到子元件的資料</h2>
       <h3>實際撰寫</h3>
-      <Booking/>
-      <Booking2/>
+      <p>父元件： {parentData}</p>
+      <Booking data={parentData} setParentData={setParentData} change={change}/>
       <h3>注意</h3>
       <ul>
         <li>單向傳遞原則</li>
         <li>和 State 的差別</li>
-        {/* <table>
+         <table>
           <thead>
             <tr>
               <td></td>
@@ -34,7 +38,7 @@ function Memo() {
               <td>唯讀、不可改變</td>
             </tr>
           </tbody>
-        </table> */}
+        </table> 
       </ul>
     </div>
   )
