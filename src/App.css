@@ -10,25 +10,16 @@ h1,h2,h3{
 li{
   color: rgb(29, 48, 140);
 }
-img{
-  width: 400px;
-}
-tr{
-  display: block;
-  border-bottom: 1px solid #000;
-}
-td{
-  width: 150px;
-  padding: 1rem;
-}
+
 .App{
   padding: 1rem 3rem;
 }
 .text-red{
 color: red;
 }
-.child{
+.box{
   width: 300px;
   background: rgb(100, 193, 236);
   padding: 1rem;
+  text-align: center;
 }
