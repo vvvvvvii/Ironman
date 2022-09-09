@@ -1,40 +1,20 @@
 import React, { Component } from 'react'
-import Child from './Child'
 export class Booking2 extends Component {
   state = {
-    num: 0,
-    data: "父元件",
+    data: 'data'
   }
-  handleNum(type){
-    if(type=== 'minus'){
-      this.setState({
-        ...this.state,
-        num: 0
-      })
-    }else{
-      this.setState({
-        ...this.state,
-        num: this.state.num+1
-      })
-    }
-  }
-  handleData(childData){
+  handleClick(){
     this.setState({
       ...this.state,
-      data: childData
+      data: 'new data'
     })
   }
-  // componentDidUpdate(){
-  //   console.log('re render')
-  // }
+  
   render() {
     return (
       <div>
-        <p>加盟店訂位人數</p>
-        <button onClick={()=>this.handleNum('minus')}>-</button>
-        {this.state.num}
-        <button onClick={()=>this.handleNum('plus')}>+</button> 
-        <Child data={this.state.data} handleData={this.handleData.bind(this)}></Child>
+        <p>開啟 console 面板</p>
+        <button onClick={()=>this.handleClick()}>click</button>
       </div>
     )
   }
