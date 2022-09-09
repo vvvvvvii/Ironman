@@ -9,7 +9,15 @@ export class Booking2 extends Component {
       data: 'new data'
     })
   }
-  
+  componentDidMount(){
+    console.log('first render')
+  }
+  componentDidUpdate(){
+    console.log('re render')
+  }
+  componentWillUnmount(){
+    console.log('unmount')
+  }
   render() {
     return (
       <div>
