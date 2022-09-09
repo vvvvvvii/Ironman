@@ -1,44 +1,31 @@
 import React from 'react';
-import { useState } from 'react';
 import Booking from "./Booking";
+import Booking2 from "./Booking2";
 
 function Memo() {
-  const [parentData, setParentData] = useState("父元件創立的資料");
-  const change = (parameter) =>{
-    setParentData(parameter)
-  }
   return (
     <div>
-      <h1>Props</h1>
-      <h2>「單向傳遞」父元件到子元件的資料</h2>
+      <h1>Functional Component & Class Component</h1>
+      <h3>講古</h3>
+      <ul>
+        <li>沒有 hooks 以前</li>
+        <li>React 16.8 以後</li>
+      </ul>
       <h3>實際撰寫</h3>
-      <p>父元件： {parentData}</p>
-      <Booking data={parentData} setParentData={setParentData} change={change}/>
+      <Booking />
+      <Booking2 />
       <h3>注意</h3>
       <ul>
-        <li>單向傳遞原則</li>
-        <li>和 State 的差別</li>
-         <table>
-          <thead>
-            <tr>
-              <td></td>
-              <td>State</td>
-              <td>Props</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>控制</td>
-              <td>自己本身</td>
-              <td>讓父元件來控制自己</td>
-            </tr>
-            <tr>
-              <td>改變</td>
-              <td>可被改變</td>
-              <td>唯讀、不可改變</td>
-            </tr>
-          </tbody>
-        </table> 
+        <li>State 統一放在 state 物件，取用要加上 this.state </li>
+        <li>改值要使用 this.setState ，只會替換掉有改變的內容</li>
+        <li>只要有調用 this.setState 就重新渲染</li>
+        <li>用 props 傳改變 State 的函式需搭配 .bind(this) </li>
+      </ul>
+      <h3>比較</h3>
+      <ul>
+        <li>Functional Component 比較簡潔</li>
+        <li>Functional Component 可避免不必要渲染</li>
+        <li>Functional Component 可避免 this 問題</li>
       </ul>
     </div>
   )
