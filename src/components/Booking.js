@@ -3,12 +3,21 @@ import { useState, useEffect } from "react";
 const Booking = () => {
   const [num, setNum] = useState(0);
   const handleNum = (type) => {
+    // useEffect(() => {
+    //   console.log("useEffect:", num);
+    // }, [num]);
     if (type === "minus") {
       setNum(num - 1);
     } else {
       setNum(num + 1);
     }
   };
+  // if (type === "minus") {
+  //   setNum(num - 1);
+  //   useEffect(() => {
+  //     console.log("useEffect:", num);
+  //   }, [num]);
+  // }
   useEffect(() => {
     console.log("useEffect:", num);
   }, [num]);
