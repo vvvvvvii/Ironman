@@ -1,17 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import useFetch from "../hooks/useFetch";
 
 function BackStage() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:8000/feedback")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
+  const { data } = useFetch("http://localhost:8000/feedback");
+
   const deleteMsg = (id) => {
     fetch(`http://localhost:8000/feedback/${id}`, {
       method: "DELETE",

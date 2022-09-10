@@ -1,17 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import useFetch from "../hooks/useFetch";
 
 function Menu() {
-  const [menu, setMenu] = useState(null);
-  useEffect(() => {
-    fetch("http://localhost:8000/menu")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setMenu(data);
-      });
-  }, []);
+  const { data: menu } = useFetch("http://localhost:8000/menu");
+
   return (
     <div className="box">
       <h2>菜單</h2>
