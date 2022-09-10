@@ -1,10 +1,13 @@
-import Memo from "./components/Memo";
+import Menu from "./components/Menu";
+import Form from "./components/Form";
+import BackStage from "./components/BackStage";
 
 export default function App() {
   return (
-    <div className="App">
-      <Memo/>      
+    <div>
+      <Menu />
+      <Form />
+      <BackStage />
     </div>
   );
 }
-

@@ -1,25 +1,75 @@
-li, button{
-  margin-bottom: .5rem;
+body {
+  margin: 0;
 }
-p{
-  margin-top: 0;
+li,
+button {
+  margin-bottom: 0.5rem;
 }
-h1,h2,h3{
-  color: rgb(0, 6, 34);
-}
-li{
+li {
   color: rgb(29, 48, 140);
 }
-
-.App{
-  padding: 1rem 3rem;
+button {
+  background: rgb(202, 82, 82);
+  color: #fff;
+  width: 25%;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.25rem;
 }
-.text-red{
-color: red;
+p {
+  margin-top: 0;
 }
-.box{
-  width: 300px;
-  background: rgb(100, 193, 236);
-  padding: 1rem;
+h1,
+h2,
+h3 {
+  color: rgb(0, 6, 34);
   text-align: center;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+label {
+  margin-bottom: 0.5rem;
+}
+input,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.text-red {
+  color: red;
+}
+.text-center {
+  text-align: center;
+}
+.box {
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu-img {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+.menu-content {
+  padding: 0.5rem 1rem;
+}
+.menu-title,
+.menu-text {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.menu-title {
+  font-size: 1.25rem;
 }
