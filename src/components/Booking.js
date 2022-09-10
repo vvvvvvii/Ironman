@@ -5,7 +5,6 @@ const Booking = () => {
   const handleNum = (type) => {
     if (type === "minus") {
       setNum(num - 1);
-      // console.log("set:", num);
     } else {
       setNum(num + 1);
     }
@@ -19,6 +18,7 @@ const Booking = () => {
       console.log("unmount");
     };
   }, []);
+
   return (
     <div>
       <p>創始店訂位人數</p>
