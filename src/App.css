@@ -1,12 +1,14 @@
-body {
+body,
+ul {
   margin: 0;
 }
 li,
 button {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 li {
   color: rgb(29, 48, 140);
+  list-style: none;
 }
 button {
   background: rgb(202, 82, 82);
@@ -16,8 +18,13 @@ button {
   border: 0;
   border-radius: 0.25rem;
 }
+a {
+  color: #fff;
+  text-decoration: none;
+}
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 h1,
 h2,
@@ -48,6 +55,17 @@ textarea {
 .text-center {
   text-align: center;
 }
+.navbar {
+  display: flex;
+  justify-content: end;
+  padding: 1.5rem 9rem;
+  background: rgb(202, 82, 82);
+}
+.nav-item {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+}
+
 .box {
   padding: 2rem;
   margin-bottom: 4rem;
@@ -72,4 +90,11 @@ textarea {
 }
 .menu-title {
   font-size: 1.25rem;
+}
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: rgb(252, 247, 247);
 }

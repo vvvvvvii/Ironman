@@ -1,17 +1,32 @@
-import { useState } from 'react';
-const Booking = (props) => {  
-  const [childData, setChildData] = useState(props.data)
-  const change = () =>{
-    setChildData('子元件改變的資料')
-  //   props.setParentData('子元件改變的資料')
-  }
+import React from "react";
+import { useState } from "react";
+
+function Booking() {
+  const [num, setNum] = useState(0);
+  const handleNum = (type) => {
+    if (type === "minus") {
+      setNum(num - 1);
+    } else {
+      setNum(num + 1);
+    }
+  };
   return (
-    <div className='child'>
-      <p>子元件： {props.data}</p>
-      <p>子元件： {childData}</p>
-      <button onClick={change}>click</button>
-      {/* <button onClick={()=>props.change('子元件傳遞的參數')}>click</button> */}
+    <div className="box">
+      <h2>立即訂位</h2>
+      <div className="booking-container">
+        <button onClick={() => handleNum("minus")} style={{ width: "10%" }}>
+          -
+        </button>
+        <p style={{ marginLeft: "8px" }}>{num}</p>
+        <button
+          onClick={() => handleNum("plus")}
+          style={{ width: "10%", marginLeft: "8px" }}
+        >
+          +
+        </button>
+      </div>
     </div>
   );
-};
+}
+
 export default Booking;

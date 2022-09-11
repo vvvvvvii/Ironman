@@ -1,13 +1,15 @@
-import Menu from "./components/Menu";
-import Form from "./components/Form";
-import BackStage from "./components/BackStage";
+import Home from "./pages/Home";
+import Memo from "./pages/Memo";
+import MenuList from "./pages/MenuList";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <div>
-      <Menu />
-      <Form />
-      <BackStage />
+      {/* <Memo /> */}
+      <Navbar />
+      <Home />
+      <MenuList />
     </div>
   );
 }
