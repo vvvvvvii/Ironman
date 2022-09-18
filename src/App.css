@@ -10,7 +10,8 @@ li {
   color: rgb(29, 48, 140);
   list-style: none;
 }
-button {
+button,
+.btn {
   background: rgb(202, 82, 82);
   color: #fff;
   width: 25%;
@@ -55,6 +56,17 @@ textarea {
 .text-center {
   text-align: center;
 }
+.align-items-center {
+  align-items: center;
+}
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgb(202, 82, 82);
+  color: rgb(202, 82, 82);
+}
 .navbar {
   display: flex;
   justify-content: end;
@@ -65,7 +77,6 @@ textarea {
   margin-left: 1rem;
   font-size: 1.25rem;
 }
-
 .box {
   padding: 2rem;
   margin-bottom: 4rem;
@@ -85,6 +96,7 @@ textarea {
 }
 .menu-title,
 .menu-text {
+  color: #000;
   margin-bottom: 0.5rem;
   text-align: center;
 }
