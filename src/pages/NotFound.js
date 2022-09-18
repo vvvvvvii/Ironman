@@ -1,8 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function NotFound() {
-  const backToPrevious = () => {};
+  const history = useHistory();
+  const backToPrevious = () => {
+    // history.go(-1);
+    history.push("/");
+  };
   return (
     <div className="box text-center">
       <h2>404 Not Found (Ｔ▽Ｔ)</h2>
