@@ -1,6 +1,6 @@
 import React from "react";
-// import ComponentA from "../components/componentA";
-// import ComponentB from "../components/componentB";
+import ComponentA from "../components/componentA";
+import ComponentB from "../components/componentB";
 
 function Memo() {
   // const condition = true;
@@ -15,16 +15,16 @@ function Memo() {
         <li>用習慣的方式撰寫 CSS</li>
         <li>屬性不用改小駝峰寫法</li>
         <li>可以實現 hover 、 media-query</li>
-        <li>在要用的元件 import ，並搭配 className 套用</li>
+        <li className="example">在要用的元件 import ，並搭配 className 套用</li>
         <li>搭配三元運算子判斷條件，再套用樣式</li>
-        <p>example 1</p>
-        <p>example 2</p>
+        <p className={condition ? "example" : ""}>example 1</p>
+        <p className={`example2 ${condition ? "example" : ""}`}>example 2</p>
       </ul>
       <h3>注意</h3>
       <ul>
         <li>CSS 不會只對應到引入的元件</li>
-        {/* <ComponentB />
-        <ComponentA /> */}
+        <ComponentB />
+        <ComponentA />
         <li>CSS 載入的順序依照被 import 的順序，不是元件使用的順序</li>
       </ul>
     </div>
