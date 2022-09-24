@@ -31,7 +31,7 @@ h1,
 h2,
 h3 {
   color: rgb(0, 6, 34);
-  text-align: center;
+  /* text-align: center; */
 }
 
 label,
@@ -62,6 +62,12 @@ textarea {
 .ml-1 {
   margin-left: 0.5rem;
 }
+.pb-2 {
+  padding-bottom: 1rem;
+}
+.border-bottom {
+  border-bottom: 1px solid rgb(202, 201, 201);
+}
 .btn-outline {
   background: transparent;
   border: 1px solid rgb(202, 82, 82);
@@ -80,6 +86,9 @@ textarea {
 .box {
   padding: 2rem;
   margin-bottom: 4rem;
+}
+.app-container {
+  padding: 1rem 3rem;
 }
 .menu-container {
   display: flex;
@@ -109,4 +118,15 @@ textarea {
   align-items: center;
   padding: 4rem 1rem;
   background: rgb(252, 247, 247);
+}
+
+/* examples from here */
+.example {
+  color: #666;
+}
+.example:hover {
+  color: #600;
+}
+.example2 {
+  font-weight: bold;
 }
