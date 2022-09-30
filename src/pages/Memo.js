@@ -1,15 +1,21 @@
 import React from "react";
-import { ButtonStyle, PrimaryButtonStyle } from "../ButtonStyle";
+
 function Memo() {
   return (
     <div>
-      <h1>Styled Components 與 props 、 extend 、共用元件</h1>
-      <h3>props ：設定會不斷用到的主題色等</h3>
-      <ButtonStyle>example 1</ButtonStyle>
-      <ButtonStyle primary>example 2</ButtonStyle>
-      <ButtonStyle secondary>example 3</ButtonStyle>
-      <h3>extend ：套用他人已寫好的樣式，再客製化</h3>
-      <PrimaryButtonStyle>example</PrimaryButtonStyle>
+      <h1>在 React 中如何使用 Bootstrap</h1>
+      <h3>介紹 Bootstrap</h3>
+      <h3>安裝</h3>
+      <a href="https://react-bootstrap.github.io/getting-started/introduction/">
+        React Bootstrap 官網
+      </a>
+      <p>npm install react-bootstrap bootstrap</p>
+      <h3>實際撰寫</h3>
+      {/* 引入 */}
+      {/* 客製化 variant & extend */}
+      {/* global styles */}
+      {/* hover */}
+      {/* props & theme */}
     </div>
   );
 }
