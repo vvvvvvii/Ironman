@@ -24,8 +24,27 @@ const theme = {
 };
 
 const GlobalStyles = createGlobalStyle`
-a{
+  a{
     text-decoration: none;
   }
+  ${theme.fonts.map(
+    (font, fontKey) => css`
+      .fz-${fontKey} {
+        font-size: ${font}rem !important;
+      }
+    `
+  )}
+  ${theme.spacers.map(
+    (spacer, spacerKey) => css`
+      ${["top", "right", "bottom", "left"].map(
+        (dir) => css`
+          .m${dir[0]}-${spacerKey}{
+            margin-${dir}: ${spacer}rem
+          }}
+        `
+      )}
+    `
+  )}
 `;
+
 export default GlobalStyles;

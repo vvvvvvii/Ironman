@@ -11,13 +11,14 @@ function Memo() {
       <Button className="mt-1">test1</Button>
       <p className="fz-1">example</p>
       <h3>theme 放在不同地方的差別</h3>
+      <CustomButton2 theme={theme}>test1</CustomButton2>
     </div>
   );
 }
-// const theme = {
-//   primary: "black",
-//   secondary: "red",
-// };
+const theme = {
+  primary: "black",
+  secondary: "red",
+};
 
 // const CustomButton = styled(Button)`
 //   font-weight: bold;
@@ -26,7 +27,7 @@ function Memo() {
 //     background: #000 !important;
 //   }
 // `;
-// const CustomButton2 = styled(Button)`
-//   background: ${(props) => props.theme.secondary};
-// `;
+const CustomButton2 = styled(Button)`
+  background: ${(props) => props.theme.secondary};
+`;
 export default Memo;
