@@ -1,51 +1,39 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { ThemeProvider } from "@emotion/react";
-import { createTheme } from "@mui/material/styles";
-
-const theme = createTheme({
-  typography: {
-    h1: {
-      fontSize: 12,
-    },
-    h2: {
-      fontSize: 20,
-    },
-  },
-  spacing: [0, 4, 80, 16, 32, 64],
-  palette: {
-    secondary: {
-      main: "#ff4400",
-    },
-  },
-});
+import NormalExample from "../components/Normal";
+import MemoExample from "../components/Memo";
+import MemoExample2 from "../components/Memo2";
+import EffectExample from "../components/Effect";
+import EffectExample2 from "../components/Effect2";
 
 function Memo() {
   return (
     <div>
-      <h1>Material UI</h1>
-      <h2>客製化樣式</h2>
-      <h3>Theme & Typography</h3>
-      <ThemeProvider theme={theme}>
-        <Typography variant="h1" component="h2">
-          custom theme
-        </Typography>
-      </ThemeProvider>
-      <Typography variant="h1" component="h2">
-        h1. Heading
-      </Typography>
-      <h3>Theme & Spacing</h3>
-      <ThemeProvider theme={theme}>
-        <Typography variant="h1" component="h2" mt={2}>
-          custom theme
-        </Typography>
-
-        <h3>Platte 顏色</h3>
-        <Button variant="contained" color="secondary">
-          123
-        </Button>
-      </ThemeProvider>
+      <h1>useMemo</h1>
+      <h3>寫法</h3>
+      <h3>作用</h3>
+      <NormalExample />
+      <MemoExample />
+      <h3>Referential Equality 與 React</h3>
+      <h3>注意：</h3>
+      <ul>
+        <li>useMemo 代表的是將東西用 cache 存起來</li>
+        <li>因為 cache 並不是非常穩定，所以不該把它用在絕不能重跑程式的場合</li>
+      </ul>
+      <h3>和 useEffect 的差異</h3>
+      <MemoExample />
+      <EffectExample />
+      <MemoExample2 />
+      <EffectExample2 />
+      <ul>
+        <li>
+          觸發時間：
+          {/* useEffect 只會在第一次渲染後被呼叫， useMemo 則會在渲染中、元件 return state 前就觸發 */}
+        </li>
+        <li>
+          {/* 使用場合： 如果是要跟 State 值有關的、或是操控 DOM，應使用 useEffect ;
+          如果是優化速度，則應使用 useMemo */}
+        </li>
+      </ul>
     </div>
   );
 }
