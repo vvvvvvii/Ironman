@@ -18,7 +18,7 @@ const Memo2 = () => {
     setIsEven(count % 2 === 0);
   }, [isEven, count]);
   useEffect(() => {
-    console.log("run useEffect");
+    console.log("run useMemo");
   }, [themeStyle]);
 
   return (

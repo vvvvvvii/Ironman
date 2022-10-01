@@ -12,8 +12,8 @@ const Effect = () => {
     setB(b + 1);
   };
   useEffect(() => {
-    setIsEven(!isEven);
-    // setIsEven(a % 2 === 0);
+    // setIsEven(!isEven);
+    setIsEven(a % 2 === 0);
     // console.log("check a");
   }, [a]); // 這裡需要監聽 isEven 但如果監聽 isEven 又會導致無限迴圈
 
