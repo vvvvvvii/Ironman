@@ -1,32 +1,7 @@
 import React from "react";
-import { createStore } from "redux";
 
-const increment = () => {
-  return {
-    type: "INCREMENT", // action 的名字
-  };
-};
-const decrement = () => {
-  return {
-    type: "DECREMENT", // action 的名字
-  };
-};
-
-const counter = (state = 0, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return state + 1;
-    case "DECREMENT":
-      return state - 1;
-    default:
-      return state;
-  }
-};
-
-let store = createStore(counter);
-
-store.subscribe(() => console.log(store.getState()));
-store.dispatch(decrement());
+// store.subscribe(() => console.log(store.getState()));
+// store.dispatch(decrement());
 
 function Memo() {
   return (
@@ -46,7 +21,7 @@ function Memo() {
       </a>
       <p>src / index.js 要改寫為：</p>
       <p>
-        const myStore = createStore( allReducer,
+        const myStore = createStore( allReducers,
         window.__REDUX_DEVTOOLS_EXTENSION__ &&
         window.__REDUX_DEVTOOLS_EXTENSION__() );
       </p>
