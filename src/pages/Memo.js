@@ -31,14 +31,25 @@ store.dispatch(decrement());
 function Memo() {
   return (
     <div>
-      <h1>Redux ：介紹、安裝與使用</h1>
-      <h3>官網</h3>
-      <a href="https://react-redux.js.org/introduction/getting-started#an-existing-react-app">
+      <h1>Redux ：傳參數、拆資料夾、 Redux DevTools</h1>
+      <h3>拆分資料夾</h3>
+      <h3>action 傳參數</h3>
+      <h3>兩個以上的 reducer</h3>
+      <p>
+        錯誤寫法：const store = createStore(counterReducer, isLoggedReducer);
+      </p>
+      <p>正確寫法：搭配 combineReducers </p>
+      <h3>useSelector & useDispatch</h3>
+      <h3>Redux DevTools</h3>
+      <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=zh-TW">
         連結
       </a>
-      <h3>安裝</h3>
-      <p>npm install redux react-redux</p>
-      <h3>撰寫</h3>
+      <p>src / index.js 要改寫為：</p>
+      <p>
+        const myStore = createStore( allReducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+        window.__REDUX_DEVTOOLS_EXTENSION__() );
+      </p>
     </div>
   );
 }
