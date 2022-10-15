@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 function PrevData() {
   const [input, setInput] = useState("");
+  const prevInput = useRef("");
   useEffect(() => {
     // 當 input 改變時紀錄到 useRef 中（因為 useRef 值改變不會造成重新渲染）
+    prevInput.current = input;
   }, [input]);
   return (
     <div>
@@ -12,7 +14,7 @@ function PrevData() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <p>剛剛輸入的是：</p>
+      <p>剛剛輸入的是：{prevInput.current}</p>
     </div>
   );
 }
