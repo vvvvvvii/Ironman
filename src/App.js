@@ -18,13 +18,13 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* <CountContext.Provider
+      <CountContext.Provider
         value={{ countState: count, countDispatch: dispatch }}
-      > */}
-      <Memo />
-      {/* <Counter /> */}
-      {/* <ComponentA /> */}
-      {/* </CountContext.Provider> */}
+      >
+        <Memo />
+        <Counter />
+        <ComponentA />
+      </CountContext.Provider>
     </div>
   );
 }

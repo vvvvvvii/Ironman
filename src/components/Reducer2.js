@@ -7,6 +7,20 @@ const initialState = {
 };
 const reducer = (state, action) => {
   // 傳入的 action 變為物件了，所以改成用 action.type 來判斷 action 的名稱
+  switch (action.type) {
+    case "add":
+      return {
+        ...state,
+        firstCounter: state.firstCounter + action.value,
+      };
+    case "add2":
+      return {
+        ...state,
+        secondCounter: state.secondCounter + 1,
+      };
+    default:
+      return state;
+  }
 };
 function Reducer2() {
   // 因為在同一物件裡，宣告一次就好
@@ -17,8 +31,12 @@ function Reducer2() {
       <p>firstCounter: {count.firstCounter}</p>
       <p>secondCounter: {count.secondCounter}</p>
       {/* dispatch 傳入物件，並用 type 代表行動名稱、 value 代表傳入的參數 */}
-      <button>+ firstCounter</button>
-      <button>+ secondCounter</button>
+      <button onClick={() => dispatch({ type: "add", value: 10 })}>
+        + firstCounter
+      </button>
+      <button onClick={() => dispatch({ type: "add2" })}>
+        + secondCounter
+      </button>
     </div>
   );
 }

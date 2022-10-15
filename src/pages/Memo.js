@@ -3,7 +3,10 @@ import Reducer from "../components/Reducer";
 import Reducer2 from "../components/Reducer2";
 import Reducer3 from "../components/Reducer3";
 
+import { useState } from "react";
+
 function Memo() {
+  // const [num, setNum] = useState(0);
   return (
     <div>
       <h1>useReducer & useContext</h1>
