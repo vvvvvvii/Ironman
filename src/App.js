@@ -1,16 +1,30 @@
 import Memo from "./pages/Memo";
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "./actions";
+import Counter from "./components/Counter";
+import ComponentA from "./components/ComponentA";
+import React, { useReducer } from "react";
 
+export const CountContext = React.createContext();
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "add":
+      return state + 1;
+    default:
+      return state;
+  }
+};
 export default function App() {
-  const counter = useSelector((state) => state.counterReducer);
-  const dispatch = useDispatch();
+  const [count, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="app-container">
+      {/* <CountContext.Provider
+        value={{ countState: count, countDispatch: dispatch }}
+      > */}
       <Memo />
-      <p>counter: {counter}</p>
-      <button onClick={() => dispatch(increment(5))}>+5</button>
-      <button onClick={() => dispatch(decrement())}>-1</button>
+      {/* <Counter /> */}
+      {/* <ComponentA /> */}
+      {/* </CountContext.Provider> */}
     </div>
   );
 }

@@ -55,6 +55,9 @@ textarea {
 .text-center {
   text-align: center;
 }
+.bg-wheat {
+  background-color: wheat;
+}
 .align-items-center {
   align-items: center;
 }
@@ -117,15 +120,4 @@ textarea {
   align-items: center;
   padding: 4rem 1rem;
   background: rgb(252, 247, 247);
-}
-
-/* examples from here */
-.example {
-  color: #666;
-}
-.example:hover {
-  color: #600;
-}
-.example2 {
-  font-weight: bold;
 }
